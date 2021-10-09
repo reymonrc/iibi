@@ -52,8 +52,7 @@
   				<img id="mid" src="mid/icon.png" onclick="play_pause()">
 
   				<script>
-  					var no_wr3ckords = 6,
-  					    playing = 0;
+  					var playing = 0;
   					var myAudio = document.getElementById('my_audio');
   					setup_audio_continuer();
 
@@ -77,7 +76,7 @@
   						else
   						{
   							playing = 1;
-  							myAudio.src = "./mid/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
+  							myAudio.src = "./mid/wr3ckord_1.mp3";
   							myAudio.play();
   							document.getElementById("mid").src = "./mid/icon.gif";
   						}
