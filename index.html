@@ -47,6 +47,41 @@
               <i class="fa fa-bars"></i>
 				    </a>
 				  </div>
+          <audio id="my_audio"></audio>
+  				<img id="mid" src="mid/icon.png" onclick="play_pause()">
+
+  				<script>
+  					var no_wr3ckords = 6,
+  					    playing = 0;
+  					var myAudio = document.getElementById('my_audio');
+  					setup_audio_continuer();
+
+  					function setup_audio_continuer()
+  					{
+  						myAudio.onended = function()
+  						{
+  							myAudio.src = "./mid/wr3ckord_1.mp3";
+  							myAudio.play();
+  						}
+  					}
+
+  					function play_pause()
+  					{
+  						if(playing)
+  						{
+  							playing = 0;
+  							myAudio.pause();
+  							document.getElementById("mid").src = "./mid/icon.png";
+  						}
+  						else
+  						{
+  							playing = 1;
+  							myAudio.src = "./mid/wr3ckord_".concat((new Date().getSeconds())%no_wr3ckords + 1).concat(".mp3");
+  							myAudio.play();
+  							document.getElementById("mid").src = "./mid/icon.gif";
+  						}
+  					}
+  				</script>
 
           <h2>Cámara Nacional de la Industria Editorial Mexicana</h2>
         	<img class="logo" src="img/nifty-site-manager.png" width="300px" style="max-width: 90%; margin-top:15px"><br>
