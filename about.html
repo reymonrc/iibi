@@ -50,33 +50,21 @@
         			<a href="https://nift.cc">Nifty site manager</a> (nsm) is a cross-platform open source git-like and $\LaTeX$-like site manager coded in C++. This is the site for the nsm site repository template <mono>basic-site</mono>.
         		</p>
         
-        		<p>
-        			See the <a href="faq.html">FAQ</a> page for how to import/fork this repository along with answers to other frequently asked questions.
-        		</p>
-        
-        		<p>
-        			To install nsm see the <a href="https://nift.cc/documentation/installing_nsm.html">nsm install</a> pages. You can learn more about managing sites from the <a href="https://nift.cc/documentation/nsm_commands.html">nsm commands</a>, <a href="https://nift.cc/documentation/content_files.html">content files</a>, <a href="https://nift.cc/documentation/template_files.html">template files</a> and <a href="https://nift.cc/documentation/nsm_tutorial.html">nsm tutorial</a> pages from the nsm documentation. The simpler things you may wish to do are below.
-        		</p>
-        
-        	<h3>How do I add a page to my site?</h3>
-        	<ol>
-        		<li>From the terminal navigate your way to the site directory.</li>
-        		<li>Enter <mono>nsm track page-name (page-title)</mono> where <mono>page-name</mono> is the name of the page file (including any directories) and optionally <mono>page-title</mono> is the title of the page. If you would like the page in a directory use page name <mono>dir-name/page-name</mono>.</li>
-        	</ol>
-        
-        	<h3>How do I remove a page from my site?</h3>
-        	<ol>
-        		<li>From the terminal navigate your way to the site directory.</li>
-        		<li>Enter <mono>nsm rm page-name</mono> where <mono>page-name</mono> is the name of the page file (including any directories).</li>
-        	</ol>
-        
-        	<h3>How do I modify a page on my site?</h3>
-        	<ol>
-        		<li>Modify the content file <mono>content/page-name.content</mono>.</li>
-        		<li>From the terminal navigate your way to the site directory.</li>
-        		<li>To view changes locally enter <mono>nsm build-updated</mono> to build the updated pages, then view the site locally (see the <a href="faq.html">FAQ</a> page for how).</li>
-        		<li>To push the changes remotely, enter <mono>nsm bcp "commit message"</mono>. Note <mono>bcp</mono> will build the updated changes locally, commit the changes to your local repository and push the changes to the remote repository, which after a short delay will update your site online.</li>
-        	</ol>
+          	$$\int\pi^2$$
+
+<pre class="prettyprint">
+for al in ['a','b']:
+  print al
+</pre>
+<textarea class="markdown">
+## Markdown Site Repository Template
+
+  This website uses [Showdown](http://showdownjs.com/) to convert Markdown to HTML.
+
+  See [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax) for documentation on Showdown's Markdown syntax, and [here](https://github.com/showdownjs/showdown#setting-options) for documentation on Showdown options.
+
+  To use emojis you need to enable the **"emoji"** option, then emojis are eg. `:smile:`, `:+1:`, `:bacon:` and `:zap:` for :smile:, :+1:, :bacon: and :zap:. See [here](https://github.com/showdownjs/showdown/wiki/emojis) for a list of Showdown supported emojis.
+</textarea>
         </div>
 
 		<div class="footer">
@@ -94,6 +82,17 @@
 			<noselect><small>&copy;&nbsp;2015 - <script>document.write(new Date().getFullYear())</script> <a href="https://n-ham.com/">Nicholas Ham</a></small>
 			<br><br></noselect>
 		</div>
+    <script src='js/process_md_blocks.js'></script>
+    <script src="js/showdown.min.js"></script>
+    <script>
+      var converter = new showdown.Converter();
+      converter.setOption('emoji', 'on');
+      converter.setOption('tables', 'on');
+      converter.setOption('strikethrough', 'on');
+      elements = document.getElementsByClassName('markdown');
+      for(var i=0; i<elements.length; i++)
+      elements[i].innerHTML = converter.makeHtml(elements[i].innerHTML.replace(/&lt;/g, "xwxw").replace(/&gt;/g, "pqpq")).replace(/xwxw/g, "&lt;").replace(/pqpq/g, "&gt;");
+    </script>
     </body>
 </html>
 
