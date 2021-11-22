@@ -16,25 +16,6 @@
              see https://github.com/google/code-prettify/ for more info -->
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
-        <!-- uses MathJax CDC for LaTeX support
-             see http://docs.mathjax.org/en/latest/start.html for more info -->
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config
-            ({
-                extensions: ["tex2jax.js"],
-                jax: ["input/TeX", "output/HTML-CSS"],
-                tex2jax:
-                {
-                    inlineMath: [['$','$'], ['\\(','\\)']],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                    processEscapes: true
-                },
-                "HTML-CSS": { availableFonts: ["MathJax TeX"] }
-            });
-        </script>
-        <script type="text/javascript"
-                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
-        </script>
 
     </head>
 
@@ -83,43 +64,22 @@
   					}
   				</script>
 
-          <h2>Cámara Nacional de la Industria Editorial Mexicana</h2>
+          <h2>C&aacute;mara Nacional de la Industria Editorial Mexicana</h2>
         	<img class="logo" src="img/nifty-site-manager.png" width="300px" style="max-width: 90%; margin-top:15px"><br>
 
         </div>
 
         <div class="content">
-        	<h2>Sistema de información y repositorio CANIEM</h2>
-        	<p>
-        		This is the homepage for the nsm site repository template <mono>basic-site</mono> [<a href="https://bitbucket.org/nsm-templates/basic-site">BitBucket</a>, <a href="https://github.com/nsm-templates/basic-site">GitHub</a>, <a href="https://gitlab.com/nsm-templates/basic-site">GitLab</a>]. <a href="https://nift.cc">Nift</a> (nsm) is a cross-platform open source git-like and $\LaTeX$-like site manager coded in C++.
-        	</p>
-
-        	<p>
-        		You can import (or fork and rename) the <mono>basic-site</mono> site repository template to begin making your own site with the same design.
-        	</p>
-
-        	<p>
-        		See the <a href="about.html">About</a> page for information about adding/removing pages to/from your site and modifying the content/layout of your site.
-        	</p>
-
-        	<p>
-        		See the <a href="faq.html">FAQ</a> page for how to import/fork this repository along with answers to other frequently asked questions.
-        	</p>
-          	$$\int\pi^2$$
-
-<pre class="prettyprint">
-for al in ['a','b']:
-  print al
-</pre>
-<textarea class="markdown">
-## Markdown Site Repository Template
-
-  This website uses [Showdown](http://showdownjs.com/) to convert Markdown to HTML.
-
-  See [here](https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax) for documentation on Showdown's Markdown syntax, and [here](https://github.com/showdownjs/showdown#setting-options) for documentation on Showdown options.
-
-  To use emojis you need to enable the **"emoji"** option, then emojis are eg. `:smile:`, `:+1:`, `:bacon:` and `:zap:` for :smile:, :+1:, :bacon: and :zap:. See [here](https://github.com/showdownjs/showdown/wiki/emojis) for a list of Showdown supported emojis.
-</textarea>
+        	<h2>Sistema de informaci&oacute;n y repositorio CANIEM</h2>
+            <ul>
+                <li>Repositorio</li>
+                <li>Sistema de informaci&oacute;n
+                <ul>
+                    <li>Acceso p&uacute;blico</li>
+                    <li>acceso restringido</li>
+                </ul></li>
+                <li>Encuesta</li>
+            </ul>
         </div>
 
 		<div class="footer">
@@ -130,19 +90,8 @@ for al in ['a','b']:
 			<small>Site Manager: <a href="https://nift.dev">Nift</a></small>
 			</p>
 
-			<noselect><small>&copy;&nbsp;2021 - <script>document.write(new Date().getFullYear())</script> <a href="https://n-ham.com/">RRC</a></small>
+			<noselect><small>&copy;&nbsp;2021 - <script>document.write(new Date().getFullYear())</script> <a href="http://aws.reymon.mx/">RRC</a></small>
 			<br><br></noselect>
 		</div>
-    <script src='js/process_md_blocks.js'></script>
-    <script src="js/showdown.min.js"></script>
-    <script>
-      var converter = new showdown.Converter();
-      converter.setOption('emoji', 'on');
-      converter.setOption('tables', 'on');
-      converter.setOption('strikethrough', 'on');
-      elements = document.getElementsByClassName('markdown');
-      for(var i=0; i<elements.length; i++)
-      elements[i].innerHTML = converter.makeHtml(elements[i].innerHTML.replace(/&lt;/g, "xwxw").replace(/&gt;/g, "pqpq")).replace(/xwxw/g, "&lt;").replace(/pqpq/g, "&gt;");
-    </script>
     </body>
 </html>

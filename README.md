@@ -1,3 +1,3 @@
 # iibi - CANIEM
 
-[Nift](https://nift.cc/) based site
+[Nift](https://nift.dev/) based site
