@@ -1,38 +1,38 @@
 <html>
-    <head>
-        <title>Sistema de información CANIEM</title>
+<head>
+    <title>Sistema de información CANIEM</title>
 
-        <link rel='stylesheet' type='text/css' href='css/footer.css'>
-        <link rel='stylesheet' type='text/css' href='css/menu.css'>
-        <link rel='stylesheet' type='text/css' href='css/pagestyle.css'>
-        <link rel='stylesheet' type='text/css' href='css/pre.css'>
-        <link rel="stylesheet" href="css/mid.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="js/menu.js"></script>
+    <link href='css/footer.css' rel='stylesheet' type='text/css'>
+    <link href='css/menu.css' rel='stylesheet' type='text/css'>
+    <link href='css/pagestyle.css' rel='stylesheet' type='text/css'>
+    <link href='css/pre.css' rel='stylesheet' type='text/css'>
+    <link href="css/mid.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/menu.js" type="text/javascript"></script>
 
-        <meta name='viewport' content='width=device-width, initial-scale=0.75, maximum-scale=1.0'>
+    <meta content='width=device-width, initial-scale=0.75, maximum-scale=1.0' name='viewport'>
 
-        <!-- uses google-code-prettify for syntax highlighting
-             see https://github.com/google/code-prettify/ for more info -->
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <!-- uses google-code-prettify for syntax highlighting
+         see https://github.com/google/code-prettify/ for more info -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
 
-    </head>
+</head>
 
-    <body>
-        <div class="header" id="header">
-          <div class="topnav" id="myTopnav">
-          	<a href="index.html" class="header_item">Home</a>
-          	<a href="about.html" class="header_item">About</a>
-          	<a href="faq.html" class="header_item">FAQ</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-				    </a>
-				  </div>
-          <audio id="my_audio"></audio>
-  				<img id="mid" src="mid/icon.png" onclick="play_pause()">
+<body>
+<div class="header" id="header">
+    <div class="topnav" id="myTopnav">
+        <a class="header_item" href="index.html">Home</a>
+        <a class="header_item" href="about.html">About</a>
+        <a class="header_item" href="faq.html">FAQ</a>
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <audio id="my_audio"></audio>
+    <img id="mid" onclick="play_pause()" src="mid/icon.png">
 
-  				<script>
+    <script>
   					var playing = 0;
   					var myAudio = document.getElementById('my_audio');
   					setup_audio_continuer();
@@ -62,36 +62,40 @@
   							document.getElementById("mid").src = "./mid/icon.gif";
   						}
   					}
-  				</script>
 
-          <h2>C&aacute;mara Nacional de la Industria Editorial Mexicana</h2>
-        	<img class="logo" src="img/nifty-site-manager.png" width="300px" style="max-width: 90%; margin-top:15px"><br>
+    </script>
 
-        </div>
+    <h2>C&aacute;mara Nacional de la Industria Editorial Mexicana</h2>
+    <img class="logo" src="img/nifty-site-manager.png" style="max-width: 90%; margin-top:15px" width="300px"><br>
 
-        <div class="content">
-        	<h2>Sistema de informaci&oacute;n y repositorio CANIEM</h2>
+</div>
+
+<div class="content">
+    <h2>Sistema de informaci&oacute;n y repositorio CANIEM</h2>
+    <ul>
+        <li>Repositorio</li>
+        <li>Encuesta</li>
+        <li>Sistema de informaci&oacute;n
             <ul>
-                <li>Encuesta</li>
-                <li>Repositorio</li>
-                <li>Sistema de informaci&oacute;n
-                <ul>
-                    <li>Acceso p&uacute;blico</li>
-                    <li>acceso restringido</li>
-                </ul></li>
+                <li>Acceso p&uacute;blico</li>
+                <li>acceso restringido</li>
             </ul>
-        </div>
+        </li>
+    </ul>
+</div>
 
-		<div class="footer">
-			<div class="footer_text">ReyMon</div>
-			<noselect><img src="img/nsm.png" width="50px" style="margin-bottom:20px">
-			<br></noselect>
-			<p style="margin-top:0px">
-			<small>Site Manager: <a href="https://nift.dev">Nift</a></small>
-			</p>
+<div class="footer">
+    <div class="footer_text">ReyMon</div>
+    <noselect><img src="img/nsm.png" style="margin-bottom:20px" width="50px">
+        <br></noselect>
+    <p style="margin-top:0px">
+        <small>Site Manager: <a href="https://nift.dev">Nift</a></small>
+    </p>
 
-			<noselect><small>&copy;&nbsp;2021 - <script>document.write(new Date().getFullYear())</script> <a href="http://aws.reymon.mx/">RRC</a></small>
-			<br><br></noselect>
-		</div>
-    </body>
+    <noselect><small>&copy;&nbsp;2021 -
+        <script>document.write(new Date().getFullYear())</script>
+        <a href="http://aws.reymon.mx/">RRC</a></small>
+        <br><br></noselect>
+</div>
+</body>
 </html>
