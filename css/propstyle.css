@@ -22,8 +22,8 @@ div.content
 	padding-top: 1px;
 	padding-bottom: 5px;
 
-	background-color:#573535;
-	color:#f3e3c5;
+	background-color:white;
+	color:black;
 
 	word-wrap:break-word;
 
@@ -41,6 +41,7 @@ div.content
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }
+
 
 textarea.markdown
 {
@@ -78,10 +79,18 @@ ol li
 	margin-bottom: 3px;
 }
 
+ul { list-style-type: none; }
+ul:first-child  li:before { content:"\2713\0020"; }  /* OR */
+ul:nth-child(2) li:before { content:"\2714\0020"; }  /* OR */
+ul:last-child   li:before { content:"\2611\0020"; }
+ul li:before {
+  content: '\2714\0020';
+}
+
 footer
 {
 	text-align: center;
-	margin-top:15px;
+	margin-top:20px;
 }
 
 header
