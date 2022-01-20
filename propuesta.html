@@ -57,7 +57,7 @@ __Proyecto__: Sistema de información y encuesta CANIEM
 
 ### Encuesta
 
-- Migración y consolidación de datos históricos en _access_ y _excel_.
+- Análisis, migración y consolidación de datos históricos en _access_ y _excel_.
 - Definición de la encuesta y modelo de datos a sistematizar.
 - Interface para la habilitación de nuevas encuestas con la posibilidad de modificaciones mínimas.
 - Portal web con funcionalidad para:
@@ -70,29 +70,28 @@ __Proyecto__: Sistema de información y encuesta CANIEM
 
 ### Sistema de información
 
-- Migración de datos.
+- Análisis, migración y consolidación de datos existentes.
 - Definición del modelo de datos base.
-- Sistema de reportes
-    - Reportes fijos
-    - Reportes interactivos
-- Repositorio de documentos con metadatos de búsqueda
-- Integración con reportes de encuestas
+- Desarrollo de un sistema de reportes el cual contempla
+    - Reportes fijos,
+    - Reportes interactivos.
+- Repositorio de documentos con metadatos para búsquedas.
+- Desarrollo de interface para la administración del sistema.
+- Integración de repositorio, reportes y encuesta en una interface web que contemple usuarios con niveles de acceso.
 
 ## Tiempo y recursos
 
-__Tiempo__: de 4 a 6 meses dependiendo del estado y volumen de los datos a migrar
+__Tiempo__: de 1200 a 1500 horas de programación dependiendo principalmente del estado y volumen de los datos a migrar,
+    asi como de la agilidad de la interacción con CANIEM.
 
 __Recursos__
 
-  - Programador: python (pandas), postgres, elasticsearch, API
-  - Programador: python (django), javascript, css
-  - Administración del proyecto :bat:
-  - Acceso a servidor de desarrollo
-  - Software
+  - Programador: python (pandas, django), postgres, elasticsearch, REST-API, javascript, css
+  - Ejecución y administración del proyecto $10,000 mensuales. (incluye renta de servidor de desarrollo) :bat:
 
-__Requerimientos__ El servidor donde se instale el sistema en producción, debe tener acceso los documentos del
-    repositorio, espacio suficiente para alojar los datos propios y externos para la generación de reportes y
-    __adicionalmente__ para este desarrollo se requiere:
+__Requerimientos__ Los servidores de pre-producción y producción donde se instale el aplicativo, deben tener acceso a
+    los documentos de repositorio, espacio suficiente para alojar los datos propios y externos necesarios para la
+    generación de reportes y __adicionalmente__ para este desarrollo se requiere:
 
   - __Espacio__ 5gb
   - __Sistema operativo__ Linux
@@ -100,13 +99,13 @@ __Requerimientos__ El servidor donde se instale el sistema en producción, debe 
 
 ## Condiciones
 
-  - Instalación de un aplicativo en servidor del cliente con los requerimientos especificados.
+  - Instalación del aplicativo en servidores de producción y preproducción del cliente con los requerimientos especificados.
   - Tiempos dependen de que el cliente entregue la información y su retroalimentación en las primeras dos
     etapas de cada desarrollo.
   - No se incluye ningún tipo de mantenimiento
   - El cliente debe proveer los textos, formatos, datos y todos los elementos que deberán incorporarse al sistema.
   - No hay llenado de información extra
-  - Garantía de 20 dias de pruebas
+  - Garantía de 20 dias para capacitación y pruebas
 
 
 </textarea>
