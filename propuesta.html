@@ -55,40 +55,45 @@ __Proyecto__: Sistema de información y cuestionario CANIEM
 
 ## Desarrollo - Alcance
 
-### Cuestionario
+### Módulo base
 
-- Análisis, migración y consolidación de datos históricos en _access_ y _excel_.
-- Definición del cuestionario y modelo de datos a sistematizar.
-- Interface para la habilitación de nuevos cuestionarios con la posibilidad de modificaciones mínimas.
-- Portal web con funcionalidad para:
-    - Generación de reportes tipo:
-        - _Sector editorial-INEGI_
-        - _Sector editorial-INEGI_
-        - _Librerías_INEGI_
-        - _Estimaciones YYYY_
-    - Publicación del cuestionario.
+- Análisis de datos fuente y definición del modelo de datos.
+- Definición del cuestionario modelo.
+- Interface para:
+  - Visualización de datos en formatos predefinidos
+  - Descarga de información
 
-### Sistema de información
+### Módulo migración de históricos cuestionario
+  - Análisis, migración y consolidación de datos históricos en _access_ y _excel_.
+  - Migración de datos
 
-- Análisis, migración y consolidación de datos existentes.
-- Definición del modelo de datos base.
-- Desarrollo de un sistema de reportes el cual contempla
-    - Reportes fijos,
-    - Reportes interactivos.
+### Módulo nuevos cuestionarios
+  - Interface para la habilitación de nuevos cuestionarios con la posibilidad de modificaciones mínimas.
+  - Publicación del cuestionario.
+  - Descarga de información
+
+### Módulo de administración
+
+- Administración de usuarios del sistema
+- Definición de reportes personalizados
 - Repositorio de documentos con metadatos para búsquedas.
-- Desarrollo de interface para la administración del sistema y carga de nueva información.
-- Integración de repositorio, reportes y cuestionario en una interface web que contemple usuarios con niveles de acceso.
+- Interface para la carga de información externa.
 
 ## Tiempo y recursos
 
-__Tiempo__: de 1200 a 1500 horas de programación dependiendo principalmente del estado y volumen de los datos a migrar,
-    asi como de la agilidad de la interacción con CANIEM.
+__Tiempo__
+
+| Módulo | meses |
+|:----:|:----:|
+|Base | 6 |
+|Migración| 3 |
+|Nuevo cuestionario| 3 |
+|Administración| 6 |
 
 __Recursos para el desarrollo__
 
-  - Programadores: python (pandas, django), java, postgres/glassfish, elasticsearch, REST-API, javascript, css.
+  - 3 Programadores: python (pandas, django), java, postgres/glassfish, elasticsearch, REST-API, javascript, css.
   - Servidor de desarrollo: Linux (Ubuntu LTS), 40Gb disco, 16Gb RAM,
-  - Ejecución y administración del proyecto $10,000 mensuales. :bat:
 
 __Requerimientos__ Los servidores de pre-producción y producción donde se instale el aplicativo, deben tener acceso a
     los documentos de repositorio, espacio suficiente para alojar los datos propios y externos necesarios para la
@@ -100,14 +105,12 @@ __Requerimientos__ Los servidores de pre-producción y producción donde se inst
 
 ## Condiciones
 
-  - Instalación del aplicativo en servidores de producción y preproducción del cliente con los requerimientos especificados.
-  - Tiempos dependen de que el cliente entregue la información y su retroalimentación en las primeras dos
-    etapas de cada desarrollo.
-  - No se incluye ningún tipo de mantenimiento
+  - Instalación de los módulos en servidores de producción y preproducción del cliente con los requerimientos especificados.
+  - Tiempos dependen de que el cliente entregue la información y su retroalimentación en las etapas del desarrollo que lo requieren.
+  - No se incluye ningún tipo de mantenimiento futuro.
   - El cliente debe proveer los textos, formatos, datos y todos los elementos que deberán incorporarse al sistema.
-  - No hay llenado de información extra
-  - Garantía de 20 dias para capacitación y pruebas
-
+  - No hay llenado de información extra.
+  - Garantía de 20 dias para capacitación y pruebas.
 
 </textarea>
 $$\mathbb R$$
