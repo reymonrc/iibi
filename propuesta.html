@@ -49,69 +49,136 @@
 <textarea class="markdown">
 # Propuesta técnica
 
-__Fecha__: 20 Enero 2022
+**Fecha**: 20 Enero 2022
 
-__Proyecto__: Sistema de información y cuestionario CANIEM
+**Proyecto**: Plataforma de Información Integral CANIEM
 
 ## Desarrollo - Alcance
 
-### Módulo base (_sin datos_)
+### Análisis de datos fuente y definición del modelo de datos
 
-- Análisis de datos fuente y definición del modelo de datos.
-- Definición del cuestionario modelo.
-- Interface para:
-    - Visualización de datos en formatos predefinidos,
-    - Descarga de información.
+- Definición del modelo de datos para la recolección de información de cuestionario.
+- Creación de la estructura de datos.
+- Interface para la visualización de datos de cuestionario.
 
-### Módulo migración de históricos cuestionario
-  - Análisis, migración y consolidación de datos históricos en _access_ y _excel_.
-  - Migración de datos.
-  - Descarga y visualización de datos históricos.
+Entregable:
 
-### Módulo nuevos cuestionarios
-  - Interface para la habilitación de nuevos cuestionarios con la posibilidad de modificaciones mínimas.
-  - Publicación del cuestionario.
-  - Descarga y visualización de información.
+- Definición de casos de uso:
+  - 0-DATOS DE LA EMPRESA
+  - I-PRODUCCIÓN
+  - II-CANALES DE COMERCIALIZACIÓN
+  - III-VENTA POR TEMAS
+  - IV-VENTA DE CANALES POR TEMA
+  - V-EDICIONES EN OTRO SOPORTE
+  -  VI-VENTA EDICIONES DIGITALES
+  - VII-EMPLEO
+- Modelo de datos.
+- Módulo web con interfaces de visualización de cuestionario.
 
-### Módulo de administración
+### Migración de datos históricos (cuestionarios)
 
-- Administración de usuarios del sistema
-- Definición de reportes personalizados
-- Repositorio de documentos con metadatos para búsquedas.
-- Interface para la carga de información externa.
+- Análisis de datos históricos provenientes de *access* y *excel*.
+- Migración de datos.
+
+Entregable:
+
+- Módulos web con interfaces de visualización de cuestionario con datos migrados.
+
+### Cuestionarios
+
+- Interface para la habilitación de nuevos cuestionarios.
+- Publicación del cuestionario.
+- Visualización de información.
+
+Entregable:
+
+- Módulo web con interfaces para habilitación, publicación y visualización de información de cuestionarios.
+
+### Administración
+
+- Administración de usuarios del sistema.
+
+Entregable:
+
+- Módulos web con gráficas correspondientes a los indicadores del sector editorial
+
+### Indicadores del sector editorial
+
+- Generación de Indicadores del sector editorial:
+  - Producción editorial por tipo de edición
+  - Costo de producción
+  - Venta de ejemplares
+  - Facturación neta
+  - Clasificación temática de las ventas
+  - Principales canales de comercialización
+  - Comercialización de libros digitales
+  - Facturación neta total ediciones digitales + ediciones impresas
+
+Entregable:
+
+- Módulos web con gráficas correspondientes a los indicadores del sector editorial
+
+### Repositorio de documentos
+
+- Almacenamiento de documentos con metadatos.
+- Búsqueda de documentos.
+- Publicación de documentos.
+
+Entregable:
+
+- Módulo web con interfaz que permita la carga, búsqueda y publicación de documentos en el sistema.
+
+### Carga de información externa
+
+- Interface para el ingreso de información proveniente de otras fuentes:
+  - INEGI
+  - Indautor
+  - Bookscan/Nielsen
+
+- Descarga y visualización de datos históricos.
+
+Entregable:
+
+- Módulo web con interfaz que permita el ingreso de información mediante formularios o vía web services en el sistema.
 
 ## Tiempo y recursos
 
-__Tiempo__
+### Tiempo
 
-| Módulo | meses de desarrollo |
-|:----:|:----:|
-|Base | 6 |
-|Migración| 3 |
-|Nuevos cuestionarios| 3 |
-|Administración| 6 |
+| Etapa              | meses de desarrollo |
+|:-------------------|-------------------:|
+| Análisis de datos   | 6                   |
+| Migración           | 3                   |
+| Cuestionarios       | 3                   |
+| Administración      | 2                   |
+| Indicadores         | 3                   |
+| Repositorio         | 1                   |
+| Información Externa | 1                   |
 
-__Recursos para el desarrollo__
+### Recursos para el desarrollo
 
-  - 3 Programadores: python (pandas, django), java, postgres/glassfish, elasticsearch, REST-API, javascript, css.
-  - Servidor de desarrollo: Linux (Ubuntu LTS), 40Gb disco, 16Gb RAM,
+- 3 Programadores: python (pandas, django), java, postgres/glassfish, elasticsearch, REST-API, javascript, css.
+- Servidor de desarrollo: Linux (Ubuntu LTS), 40Gb disco, 16Gb RAM,
 
-__Requerimientos__ Los servidores de pre-producción y producción donde se instale el aplicativo, deben tener acceso a
-    los documentos de repositorio, espacio suficiente para alojar los datos propios y externos necesarios para la
-    generación de reportes y __adicionalmente__ para este desarrollo se requiere:
+### Requerimientos
+Los servidores de pre-producción y producción donde se instale el aplicativo, deben tener acceso a los documentos
+    del repositorio, espacio suficiente para alojar los datos propios y externos necesarios para la generación de
+    reportes y **adicionalmente** para este desarrollo se requiere:
 
-  - __Espacio__ 10gb
-  - __Sistema operativo__ Linux
+- **Espacio** 10gb
+- **Sistema operativo** Linux
 
+## Consideraciones adicionales
 
-## Condiciones
-
-  - Instalación de los módulos en servidores de producción y preproducción del cliente con los requerimientos especificados.
-  - Tiempos dependen de que el cliente entregue la información y su retroalimentación en las etapas del desarrollo que lo requieren.
-  - No se incluye ningún tipo de mantenimiento futuro.
-  - El cliente debe proveer los textos, formatos, datos y todos los elementos que deberán incorporarse al sistema.
-  - No hay llenado de información extra.
-  - Garantía de 20 dias para capacitación y pruebas.
+- Instalación de los módulos en servidores de producción y preproducción del cliente con los requerimientos
+    especificados.
+- Tiempos dependen de que el cliente entregue la información y su retroalimentación en las etapas del desarrollo
+    que lo requieren.
+- Se incluye una proyección únicamente de la creación del sistema. No se está considerando el mantenimiento que
+    pudiera requerir el cliente de forma posterior.
+- El cliente debe proveer los textos, formatos, datos y todos los elementos que deberán incorporarse al sistema.
+- La información almacenada en el sistema, será proveída en su totalidad por el cliente.
+- Se establecerá un tiempo de garantía conveniente para ambas partes.
 
 </textarea>
 $$\mathbb R$$
