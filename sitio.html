@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Sitio IIBI</title>
+
+    <link href='css/footer.css' rel='stylesheet' type='text/css'>
+    <link href='css/menu.css' rel='stylesheet' type='text/css'>
+    <link href='css/pagestyle.css' rel='stylesheet' type='text/css'>
+    <link href='css/pre.css' rel='stylesheet' type='text/css'>
+
+    <meta content='width=device-width, initial-scale=0.75, maximum-scale=1.0' name='viewport'>
+
+    <!-- uses google-code-prettify for syntax highlighting
+         see https://github.com/google/code-prettify/ for more info -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</head>
+
+<body>
+    <!-- uses Mermaid  -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+<div class="header" id="header">
+    <img class="logo" src="img/iibi.png" style="max-width: 90%; margin-top:15px" width="300px"><br>
+
+    <a class="header_item" href="sitio.html">Sitio</a>
+    <!--a class="header_item" href="caniem.html">CANIEM</a>
+    <a class="header_item" href="faq.html">FAQ</a-->
+</div>
+
+<div class="content">
+<textarea class="markdown">
+# Sitio IIBI
+
+## Sistemas de administración o manejo de contenido
+
+- Php: Joomla, Drupal, WordPress
+- Python-Django: CMS, Wagtail
+
+Comparaciones:
+- [Wagtail - CMS](https://www.accordbox.com/blog/python-cms-framework-review-wagtail-vs-django-cms/)
+- [Wagtail - WordPress](https://end2end.dev/en/wagtail-wordpress/)
+
+Se propone __Wagtail__
+
+## Proyecto
+
+A mi entender se requeriría de dos aspectos
+
+### Habilitación de un sistema _wagtail_
+
+Instalación de los sistemas y servicios que requiere en un servidor que permita la publicación y administración del contenido del sitio web.
+
+### Migración del sitio
+
+Esta se debe entender en dos niveles:
+
+- Estilos y tipos de páginas
+- Contenido
+
+#### Situación actual
+</textarea>
+<div class="mermaid">
+%%{init: {'securityLevel': 'loose', 'theme':'base', 'themeVariables': {'darkMode':'true',  'primaryColor': '#0066ff'}}}%%
+graph TD
+    A(Drupal) --> |Por concluir| B(HTML)
+    A(Drupal) --> D(Wagtail)
+    B --> |Solicitado| D
+</div>
+
+</div>
+
+<div class="footer">
+    <div class="footer_text">ReyMon</div>
+    <noselect><img src="img/nsm.png" style="margin-bottom:20px" width="30px">
+        <br></noselect>
+    <p style="margin-top:0px">
+        <small>Site Manager: <a href="https://nift.dev">Nift</a></small>
+    </p>
+
+    <noselect><small>&copy;&nbsp;2021 -
+        <script>document.write(new Date().getFullYear())</script>
+        <a href="http://aws.reymon.mx/">RRC</a></small>
+        <br><br></noselect>
+</div>
+<script src='js/process_md_blocks.js'></script>
+<script src="js/showdown.min.js"></script>
+<script>
+      var converter = new showdown.Converter();
+      converter.setOption('emoji', 'on');
+      converter.setOption('tables', 'on');
+      converter.setOption('strikethrough', 'on');
+      elements = document.getElementsByClassName('markdown');
+      for(var i=0; i<elements.length; i++)
+      elements[i].innerHTML = converter.makeHtml(elements[i].innerHTML.replace(/&lt;/g, "xwxw").replace(/&gt;/g, "pqpq")).replace(/xwxw/g, "&lt;").replace(/pqpq/g, "&gt;");
+
+</script>
+</body>
+</html>
