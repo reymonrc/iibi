@@ -23,7 +23,7 @@
     </script>
 
 <div class="header" id="header">
-    <img class="logo" src="img/iibi.png" style="max-width: 90%; margin-top:15px" width="300px"><br>
+    <img class="logo" src="img/iibi.png" style="max-width: 90%; margin-top:15px" width="100px"><br>
 
     <a class="header_item" href="sitio.html">Sitio</a>
     <!--a class="header_item" href="caniem.html">CANIEM</a>
@@ -34,10 +34,10 @@
 <textarea class="markdown">
 # Sitio IIBI
 
-## Sistemas de administración o manejo de contenido
+## Sistemas de administraci&oacute;n o manejo de contenido - CMS
 
-- Php: Joomla, Drupal, WordPress
-- Python-Django: CMS, Wagtail
+- __Php__: [Joomla](https://www.joomla.org/), [Drupal](https://www.drupal.org/), [WordPress](https://wordpress.org/)
+- __Python-Django__: [CMS](https://www.django-cms.org/es/), [Wagtail](https://wagtail.org/)
 
 Comparaciones:
 - [Wagtail - CMS](https://www.accordbox.com/blog/python-cms-framework-review-wagtail-vs-django-cms/)
@@ -47,20 +47,20 @@ Se propone __Wagtail__
 
 ## Proyecto
 
-A mi entender se requeriría de dos aspectos
+A mi entender se requerir&iacute;a de dos aspectos
 
-### Habilitación de un sistema _wagtail_
+### Habilitaci&oacute;n de un sistema _wagtail_
 
-Instalación de los sistemas y servicios que requiere en un servidor que permita la publicación y administración del contenido del sitio web.
+Instalaci&oacute;n de los sistemas y servicios que requiere en un servidor que permita la publicaci&oacute;n y administraci&oacute;n del contenido del sitio web.
 
-### Migración del sitio
+### Migraci&oacute;n del sitio
 
 Esta se debe entender en dos niveles:
 
-- Estilos y tipos de páginas
+- Estilos y tipos de p&aacute;ginas
 - Contenido
 
-#### Situación actual
+#### Situaci&oacute;n actual
 </textarea>
 <div class="mermaid">
 %%{init: {'securityLevel': 'loose', 'theme':'base', 'themeVariables': {'darkMode':'true',  'primaryColor': '#0066ff'}}}%%
@@ -69,7 +69,16 @@ graph TD
     A(Drupal) --> D(Wagtail)
     B --> |Solicitado| D
 </div>
+<textarea class="markdown">
+### Propuesta
 
+[Sitio muestra](https://8080-wagtail-bakerydemo-5ddsae6ism9.ws-us32.gitpod.io/admin)  _admin/iibi1131_
+
+1. __Instalaci&oacute;n de wagtail__ (_cascar&oacute;n_) $2,000
+1. Migraci&oacute;n
+    1. __Estilos__: es necesario evaluar cuantos ocupan y su estructura tanto en la versi&oacute;n _Drupal_ como _HTML_, para poder cotizar (supongo entre $10,000 y 20,000).
+    1. __Contenido__: no me es claro si lo est&aacute;n solicitando, tampoco si va a ser util el trabajo de migrarlo a _HTML_. Dependiendo del volumen y caracter&iacute;sticas se puede evaluar una migraci&oacute;n semi-automatizada.
+</textarea>
 </div>
 
 <div class="footer">
