@@ -71,21 +71,20 @@ Proponer tres etapas o niveles de desarrollo:
 
 </textarea>
   <pre class="mermaid">
-        graph LR
-        A[Guía de Referencia I] --> B{Todas las respuestas} 
-        B -- no -- > C[Guía de Referencia III] 
-        B -- algún si -- > D[Guía de referencia II]
-        D -- > E{Riesgo}
-        E -- ninguno -- > Z(FIN)
-        E -- alguno --> G[Acciones]
-        G -- > H[Evidencia]
-        I -- > C
-        C -- > F{Riesgo}
-        F -- ninguno -- > Z(FIN)
-        F -- alguno --> J[Acciones]
+flowchart TD
+        A[Guía de Referencia I] --> B{respuestas}
+        B -->|algun si| D[Guía de referencia II] 
+        B -->|todo no| C[Guía de Referencia III] 
+        D --> E{Riesgo}
+        E -->|ninguno| C
+        E -->|alguno| G[Acciones]
+        G --> H[Evidencia]
+        H --> C
+        C --> F{Riesgo}
+        F -->|ninguno| Z(FIN)
+        F -->|alguno| J[Acciones]
         J --> I[Evidencia]
-        I --> Z
-  </pre>
+        I --> Z  </pre>
 </div>
 
 <div class="footer">
