@@ -71,10 +71,20 @@ Proponer tres etapas o niveles de desarrollo:
 
 </textarea>
   <pre class="mermaid">
-        graph TD 
-        A[Client] --> B[Load Balancer] 
-        B --> C[Server01] 
-        B --> D[Server02]
+        graph LR
+        A[Guía de Referencia I] --> B{Todas las respuestas} 
+        B -- no -- > C[Guía de Referencia III] 
+        B -- algún si -- > D[Guía de referencia II]
+        D -- > E{Riesgo}
+        E -- ninguno -- > Z(FIN)
+        E -- alguno --> G[Acciones]
+        G -- > H[Evidencia]
+        I -- > C
+        C -- > F{Riesgo}
+        F -- ninguno -- > Z(FIN)
+        F -- alguno --> J[Acciones]
+        J --> I[Evidencia]
+        I --> Z
   </pre>
 </div>
 
