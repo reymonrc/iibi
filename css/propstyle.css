@@ -80,11 +80,11 @@ ol li
 }
 
 ul { list-style-type: none; }
-ul:first-child  li:before { content:"\2713"; }  /* OR */
-ul:nth-child(2) li:before { content:"\2714"; }  /* OR */
-ul:last-child   li:before { content:"\2611"; }
+ul:first-child  li:before { content:"\2713\0020"; }  /* OR */
+ul:nth-child(2) li:before { content:"\2714\0020"; }  /* OR */
+ul:last-child   li:before { content:"\2611\0020"; }
 ul li:before {
-  content: '\2714';
+  content: '\2714\0020';
 }
 
 footer
