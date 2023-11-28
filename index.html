@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Proyectos RRC</title>
+
+    <link href='css/footer.css' rel='stylesheet' type='text/css'>
+    <link href='css/menu.css' rel='stylesheet' type='text/css'>
+    <link href='css/pagestyle.css' rel='stylesheet' type='text/css'>
+    <link href='css/pre.css' rel='stylesheet' type='text/css'>
+    <link href="css/mid.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/menu.js" type="text/javascript"></script>
+
+    <meta content='width=device-width, initial-scale=0.75, maximum-scale=1.0' name='viewport'>
+
+    <!-- uses google-code-prettify for syntax highlighting
+         see https://github.com/google/code-prettify/ for more info -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+
+</head>
+
+<body>
+<div class="header" id="header">
+    <div class="topnav" id="myTopnav">
+        <a class="header_item" href="index.html">Inicio</a>
+        <a class="header_item" href="sitio.html">Skandia</a>
+        <!--a class="header_item" href="about.html">Notas</a>
+        <a class="header_item" href="faq.html">FAQ</a-->
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <audio id="my_audio"></audio>
+    <img id="mid" onclick="play_pause()" src="mid/icon.png">
+
+    <script>
+  					var playing = 0;
+  					var myAudio = document.getElementById('my_audio');
+  					setup_audio_continuer();
+
+  					function setup_audio_continuer()
+  					{
+  						myAudio.onended = function()
+  						{
+  							myAudio.src = "./mid/wr3ckord_1.mp3";
+  							myAudio.play();
+  						}
+  					}
+
+  					function play_pause()
+  					{
+  						if(playing)
+  						{
+  							playing = 0;
+  							myAudio.pause();
+  							document.getElementById("mid").src = "./mid/icon.png";
+  						}
+  						else
+  						{
+  							playing = 1;
+  							myAudio.src = "./mid/wr3ckord_1.mp3";
+  							myAudio.play();
+  							document.getElementById("mid").src = "./mid/icon.gif";
+  						}
+  					}
+
+    </script>
+
+    <h2>Proyectos compartidos</h2>
+    <img class="logo" src="img/skandia.png" style="max-width: 90%; margin-top:15px" width="100px"><br>
+
+</div>
+
+<div class="content">
+    <h2>Proyectos</h2>
+    <ul>
+        <li><a href="skandia.html">Skandia</a></li>
+    </ul>
+</div>
+
+<div class="footer">
+    <div class="footer_text">ReyMon</div>
+    <noselect><img src="img/nsm.png" style="margin-bottom:20px" width="30px">
+        <br></noselect>
+    <p style="margin-top:0px">
+        <small>Site Manager: <a href="https://nift.dev">Nift</a></small>
+    </p>
+
+    <noselect><small>&copy;&nbsp;2021 -
+        <script>document.write(new Date().getFullYear())</script>
+        <a href="http://aws.reymon.mx/">RRC</a></small>
+        <br><br></noselect>
+</div>
+</body>
+</html>
